@@ -10,7 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List {
+                Section(header: Text("High Priority")) {
+                    Text("Walk the dog")
+                    Text("Brush my teeth")
+                    Text("Learn iOS development")
+                }
+                Section(header: Text("Low priority")) {
+                    Text("Soccer practice")
+                    Text("Eat ice cream")
+                }
+            }
+            .navigationBarTitle("Checklist")
+            .listStyle(GroupedListStyle())
+        }
     }
 }
 
