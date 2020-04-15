@@ -23,8 +23,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(checklistItems, id: \.self) {
-                    item in Text(item)
+                ForEach(checklistItems, id: \.self) { item in
+                    Text(item)
+                        .onTapGesture {
+                            self.checklistItems.append(item)
+                            self.printChecklistContents()
+                    }
                 }
             }
             .navigationBarTitle("Checklist")
