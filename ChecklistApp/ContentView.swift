@@ -9,11 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    var checklistItems = ["Walk the dog", "Brush my teeth", "Learn iOS development", "Soccer practice", "Eat ice cream"]
+    @State var checklistItems = [
+        "Walk the dog",
+        "Brush my teeth",
+        "Learn iOS development",
+        "Soccer practice",
+        "Eat ice cream",
+    ]
     var body: some View {
         NavigationView {
             List {
                     Text(checklistItems[0])
+                        .onTapGesture {
+                            self.checklistItems[0] = "Take the dog to the vet"
+                        }
                     Text(checklistItems[1])
                     Text(checklistItems[2])
                     Text(checklistItems[3])
@@ -23,6 +32,13 @@ struct ContentView: View {
             .listStyle(GroupedListStyle())
         }
     }
+    
+    func printChecklistContents() {
+        for item in checklistItems {
+            print(item)
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
