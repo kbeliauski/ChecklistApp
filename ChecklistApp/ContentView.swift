@@ -10,16 +10,22 @@ import SwiftUI
 
 struct ContentView: View {
     @State var checklistItems = [
-        "Walk the dog",
-        "Brush my teeth",
-        "Learn iOS development",
-        "Soccer practice",
-        "Eat ice cream",
-    ]
+          "Take vocal lessons",
+          "Record hit single",
+          "Learn every martial art",
+          "Design costume",
+          "Design crime-fighting vehicle",
+          "Come up with superhero name",
+          "Befriend space raccoon",
+          "Save the world",
+          "Star in blockbuster movie",
+        ]
     var body: some View {
         NavigationView {
             List {
-                    Text("Nothing to see")
+                ForEach(checklistItems, id: \.self) {
+                    item in Text(item)
+                }
             }
             .navigationBarTitle("Checklist")
             .onAppear(){
