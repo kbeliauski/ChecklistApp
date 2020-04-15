@@ -19,17 +19,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                    Text(checklistItems[0])
-                        .onTapGesture {
-                            self.checklistItems[0] = "Take the dog to the vet"
-                        }
-                    Text(checklistItems[1])
-                    Text(checklistItems[2])
-                    Text(checklistItems[3])
-                    Text(checklistItems[4])
+                    Text("Nothing to see")
             }
             .navigationBarTitle("Checklist")
-            .listStyle(GroupedListStyle())
+            .onAppear(){
+                self.printChecklistContents()
+            }
         }
     }
     
