@@ -29,12 +29,8 @@ struct ContentView: View {
                     HStack {
                         Text(checklistItem.name)
                         Spacer()
-                        if checklistItem.isChecked {
-                            Text("✅")
-                        }
-                        else {
-                            Text("🔲")
-                        }
+                        //ternary conditional operator
+                        Text(checklistItem.isChecked ? "✅" : "🔲")
                     }
                 }
                 .onDelete(perform: deleteListItem)
