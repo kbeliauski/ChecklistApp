@@ -27,7 +27,9 @@ struct ContentView: View {
                     Text(item)
                 }
                 .onDelete(perform: deleteListItem)
+                .onMove(perform: moveListItem)
             }
+            .navigationBarItems(trailing: EditButton())
             .navigationBarTitle("Checklist")
             .onAppear(){
                 self.printChecklistContents()
@@ -43,6 +45,11 @@ struct ContentView: View {
     
     func deleteListItem(whichElement: IndexSet) {
         checklistItems.remove(atOffsets: whichElement)
+        printChecklistContents()
+    }
+    
+    func moveListItem(whichElement: IndexSet, destination: Int) {
+        checklistItems.move(fromOffsets: whichElement, toOffset: destination)
         printChecklistContents()
     }
     
