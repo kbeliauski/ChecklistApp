@@ -15,12 +15,17 @@ struct ChecklistItem: Identifiable {
 }
 
 struct ContentView: View {
+    
+    //properties
+    //=========
+    
+    
     @State var checklistItems = [
             ChecklistItem(name: "Walk the dog"),
             ChecklistItem(name: "Brush my teeth"),
-            ChecklistItem(name: "Walk the dog", isChecked: true),
+            ChecklistItem(name: "Learn iOS development", isChecked: true),
             ChecklistItem(name: "Soccer practice"),
-            ChecklistItem(name: "Walk the dog", isChecked: true),
+            ChecklistItem(name: "Eat ice cream", isChecked: true),
         ]
     var body: some View {
         NavigationView {
@@ -31,6 +36,14 @@ struct ContentView: View {
                         Spacer()
                         //ternary conditional operator
                         Text(checklistItem.isChecked ? "✅" : "🔲")
+                    }
+                    .background(Color.white)
+                    .onTapGesture {
+                        if let matchingIndex = self.checklistItems.firstIndex(where: {
+                            $0.id == checklistItem.id
+                        }) {
+                            self.checklistItems[matchingIndex].isChecked.toggle()
+                        }
                     }
                 }
                 .onDelete(perform: deleteListItem)
@@ -43,6 +56,9 @@ struct ContentView: View {
             }
         }
     }
+    
+    //methods
+    //=======
     
     func printChecklistContents() {
         for item in checklistItems {
@@ -61,6 +77,9 @@ struct ContentView: View {
     }
     
 }
+
+//preview
+//=======
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
