@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D65472493D3DD003C5E2F /* EditChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D65462493D3DD003C5E2F /* EditChecklistItemView.swift */; };
 		49200DC12445F3E90075581D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC02445F3E90075581D /* AppDelegate.swift */; };
 		49200DC32445F3E90075581D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC22445F3E90075581D /* SceneDelegate.swift */; };
-		49200DC52445F3E90075581D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC42445F3E90075581D /* ContentView.swift */; };
+		49200DC52445F3E90075581D /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC42445F3E90075581D /* ChecklistView.swift */; };
 		49200DC72445F3ED0075581D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49200DC62445F3ED0075581D /* Assets.xcassets */; };
 		49200DCA2445F3ED0075581D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49200DC92445F3ED0075581D /* Preview Assets.xcassets */; };
 		49200DCD2445F3ED0075581D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49200DCB2445F3ED0075581D /* LaunchScreen.storyboard */; };
+		49C01F652491D57D0091048E /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C01F642491D57D0091048E /* ChecklistItem.swift */; };
+		49C01F672491D6980091048E /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C01F662491D6980091048E /* Checklist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490D65462493D3DD003C5E2F /* EditChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItemView.swift; sourceTree = "<group>"; };
 		49200DBD2445F3E90075581D /* ChecklistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChecklistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49200DC02445F3E90075581D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49200DC22445F3E90075581D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49200DC42445F3E90075581D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		49200DC42445F3E90075581D /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
 		49200DC62445F3ED0075581D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49200DC92445F3ED0075581D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49200DCC2445F3ED0075581D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49200DCE2445F3ED0075581D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C01F642491D57D0091048E /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		49C01F662491D6980091048E /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			children = (
 				49200DC02445F3E90075581D /* AppDelegate.swift */,
 				49200DC22445F3E90075581D /* SceneDelegate.swift */,
-				49200DC42445F3E90075581D /* ContentView.swift */,
 				49200DC62445F3ED0075581D /* Assets.xcassets */,
 				49200DCB2445F3ED0075581D /* LaunchScreen.storyboard */,
 				49200DCE2445F3ED0075581D /* Info.plist */,
 				49200DC82445F3ED0075581D /* Preview Content */,
+				49200DC42445F3E90075581D /* ChecklistView.swift */,
+				49C01F642491D57D0091048E /* ChecklistItem.swift */,
+				49C01F662491D6980091048E /* Checklist.swift */,
+				490D65462493D3DD003C5E2F /* EditChecklistItemView.swift */,
 			);
 			path = ChecklistApp;
 			sourceTree = "<group>";
@@ -146,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49C01F672491D6980091048E /* Checklist.swift in Sources */,
 				49200DC12445F3E90075581D /* AppDelegate.swift in Sources */,
 				49200DC32445F3E90075581D /* SceneDelegate.swift in Sources */,
-				49200DC52445F3E90075581D /* ContentView.swift in Sources */,
+				49200DC52445F3E90075581D /* ChecklistView.swift in Sources */,
+				490D65472493D3DD003C5E2F /* EditChecklistItemView.swift in Sources */,
+				49C01F652491D57D0091048E /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

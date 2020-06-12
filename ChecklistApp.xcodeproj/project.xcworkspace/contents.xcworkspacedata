@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ChecklistApp.xcodeproj">
+      location = "group:/Users/kirylbeliauski/Documents/COMP SCI/SwiftCoding/ChecklistApp/ChecklistApp/ChecklistView.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
