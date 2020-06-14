@@ -13,14 +13,15 @@ struct ChecklistView: View {
     
     //properties
     //=========
-    
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var checklist = Checklist()
+    @State var newChecklistItemViewIsVisible = false
     
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(checklist.item) { checklistItem in
+                ForEach(checklist.items) { checklistItem in
                     HStack {
                         Text(checklistItem.name)
                         Spacer()
@@ -29,21 +30,30 @@ struct ChecklistView: View {
                     }
                     .background(Color.white)
                     .onTapGesture {
-                        if let matchingIndex = self.checklist.item.firstIndex(where: {
+                        if let matchingIndex = self.checklist.items.firstIndex(where: {
                             $0.id == checklistItem.id
                         }) {
-                            self.checklist.item[matchingIndex].isChecked.toggle()
+                            self.checklist.items[matchingIndex].isChecked.toggle()
                         }
                     }
                 }
                 .onDelete(perform: checklist.deleteListItem)
                 .onMove(perform: checklist.moveListItem)
             }
-            .navigationBarItems(trailing: EditButton())
-            .navigationBarTitle("Checklist")
+            .navigationBarItems(leading: Button(action: {self.newChecklistItemViewIsVisible = true}) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("Add Item")
+                    }
+            },
+                                trailing: EditButton())
+                .navigationBarTitle("Checklist", displayMode: .large)
             .onAppear(){
                 self.checklist.printChecklistContents()
             }
+        }
+        .sheet(isPresented: $newChecklistItemViewIsVisible) {
+            NewChecklistItemView(checklist: self.checklist)
         }
     }
     

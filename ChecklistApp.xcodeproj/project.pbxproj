@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		490D65472493D3DD003C5E2F /* EditChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D65462493D3DD003C5E2F /* EditChecklistItemView.swift */; };
+		490D6549249526C1003C5E2F /* NewChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D6548249526C1003C5E2F /* NewChecklistItemView.swift */; };
 		49200DC12445F3E90075581D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC02445F3E90075581D /* AppDelegate.swift */; };
 		49200DC32445F3E90075581D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC22445F3E90075581D /* SceneDelegate.swift */; };
 		49200DC52445F3E90075581D /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49200DC42445F3E90075581D /* ChecklistView.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		490D65462493D3DD003C5E2F /* EditChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItemView.swift; sourceTree = "<group>"; };
+		490D6548249526C1003C5E2F /* NewChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChecklistItemView.swift; sourceTree = "<group>"; };
 		49200DBD2445F3E90075581D /* ChecklistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChecklistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49200DC02445F3E90075581D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49200DC22445F3E90075581D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				49C01F642491D57D0091048E /* ChecklistItem.swift */,
 				49C01F662491D6980091048E /* Checklist.swift */,
 				490D65462493D3DD003C5E2F /* EditChecklistItemView.swift */,
+				490D6548249526C1003C5E2F /* NewChecklistItemView.swift */,
 			);
 			path = ChecklistApp;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				49200DC32445F3E90075581D /* SceneDelegate.swift in Sources */,
 				49200DC52445F3E90075581D /* ChecklistView.swift in Sources */,
 				490D65472493D3DD003C5E2F /* EditChecklistItemView.swift in Sources */,
+				490D6549249526C1003C5E2F /* NewChecklistItemView.swift in Sources */,
 				49C01F652491D57D0091048E /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

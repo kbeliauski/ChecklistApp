@@ -10,7 +10,7 @@ import Foundation
 
 class Checklist: ObservableObject {
     
-    @Published var item = [
+    @Published var items = [
         ChecklistItem(name: "Walk the dog"),
         ChecklistItem(name: "Brush my teeth"),
         ChecklistItem(name: "Learn iOS development", isChecked: true),
@@ -19,18 +19,18 @@ class Checklist: ObservableObject {
     ]
     
     func printChecklistContents() {
-        for item in item {
+        for item in items {
             print(item)
         }
     }
     
     func deleteListItem(whichElement: IndexSet) {
-        item.remove(atOffsets: whichElement)
+        items.remove(atOffsets: whichElement)
         printChecklistContents()
     }
     
     func moveListItem(whichElement: IndexSet, destination: Int) {
-        item.move(fromOffsets: whichElement, toOffset: destination)
+        items.move(fromOffsets: whichElement, toOffset: destination)
         printChecklistContents()
     }
 }
