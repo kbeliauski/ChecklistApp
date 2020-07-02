@@ -21,8 +21,8 @@ struct ChecklistView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(checklist.items) { checklistItem in
-                    RowView(checklistItem: checklistItem)
+                ForEach(checklist.items) { idx in
+                    RowView(checklistItem: self.$checklist.items[idx])
                 }
                 .onDelete(perform: checklist.deleteListItem)
                 .onMove(perform: checklist.moveListItem)
@@ -37,10 +37,11 @@ struct ChecklistView: View {
                 .navigationBarTitle("Checklist", displayMode: .large)
             .onAppear(){
                 self.checklist.printChecklistContents()
+                self.checklist.saveListItems()
             }
         }
         .sheet(isPresented: $newChecklistItemViewIsVisible) {
-            NewChecklistItemView(checklist: self.checklist)
+            NewChecklistItemView(checklist: self.checklist, visible: self.$newChecklistItemViewIsVisible)
         }
     }
     
